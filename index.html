@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SmileCare Dental - Modern Dental Solutions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="h-full antialiased bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+  <div class="min-h-screen flex flex-col">
+    <!-- ============================================================================ -->
+    <!-- HEADER: Sticky navigation with logo, CTA button, and theme toggle          -->
+    <!-- Features: Brand identity, quick access to booking, responsive design       -->
+    <!-- Mobile Padding: Safe spacing on all viewport sizes                         -->
+    <!-- ============================================================================ -->
+    <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/60 bg-white/80 dark:bg-slate-950/70 border-b border-slate-200/70 dark:border-slate-800">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded-xl bg-brand/15 dark:bg-brand/25 flex items-center justify-center">
+            <svg width="18" height="18" viewBox="0 0 24 24" class="text-brand">
+              <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+            </svg>
+          </div>
+          <span class="font-semibold tracking-tight">SmileCare</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="#book" class="hidden sm:inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium shadow-soft bg-brand text-white hover:opacity-90 transition">
+            Book Appointment
+            <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M5 12h12.17l-4.59-4.59L14 6l7 7l-7 7l-1.41-1.41L17.17 13H5z"/></svg>
+          </a>
+          <button id="themeToggle" class="rounded-xl border border-slate-200 dark:border-slate-800 px-3 py-2 text-sm hover:bg-slate-50 dark:hover:bg-slate-900 transition" aria-label="Toggle theme">
+            <span class="inline dark:hidden">🌙</span>
+            <span class="hidden dark:inline">☀️</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================================================================ -->
+    <!-- HERO SECTION: Main landing area with headline, subtext, and primary CTA     -->
+    <!-- Features: Background grid pattern, two-column layout, benefit cards         -->
+    <!-- Mobile Padding: Ensures text never touches viewport edges (p-4 minimum)    -->
+    <!-- ============================================================================ -->
+    <section class="relative overflow-hidden" data-section="hero">
+      <div class="absolute inset-0 bg-grid text-slate-900 dark:text-white"></div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-28">
+        <div class="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-800 px-3 py-1 text-xs">
+              <span class="h-2 w-2 rounded-full bg-blue-500"></span>
+              Welcome to SmileCare
+            </div>
+            <h1 class="mt-5 text-4xl sm:text-5xl font-extrabold tracking-tight">
+              Your smile deserves expert care
+            </h1>
+            <p class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-xl">
+              Modern dental solutions with compassionate care. From routine cleanings to advanced cosmetic dentistry, we're here to keep your smile healthy and bright.
+            </p>
+            <div class="mt-8 flex flex-wrap items-center gap-3">
+              <a href="#book" class="inline-flex items-center justify-center rounded-xl bg-brand px-5 py-3 font-semibold text-white shadow-soft hover:opacity-90 transition">
+                Schedule Your Visit
+              </a>
+              <a href="#services" class="inline-flex items-center justify-center rounded-xl border border-slate-200 dark:border-slate-800 px-5 py-3 font-semibold hover:bg-slate-50 dark:hover:bg-slate-900 transition">
+                Our Services
+              </a>
+            </div>
+            <div class="mt-6 text-sm text-slate-500 dark:text-slate-400">
+              Same-day appointments available. New patients welcome.
+            </div>
+          </div>
+          <div class="relative">
+            <div class="absolute -inset-4 bg-brand/10 blur-3xl rounded-3xl dark:bg-brand/15"></div>
+            <div class="relative rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 sm:p-8 shadow-soft">
+              <div class="grid grid-cols-2 gap-6">
+                <div class="rounded-2xl bg-slate-50 dark:bg-slate-800/60 p-4">
+                  <div class="text-sm font-semibold">Expert Dentists</div>
+                  <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">15+ years of combined experience.</p>
+                </div>
+                <div class="rounded-2xl bg-slate-50 dark:bg-slate-800/60 p-4">
+                  <div class="text-sm font-semibold">Advanced Tech</div>
+                  <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Latest digital imaging and tools.</p>
+                </div>
+                <div class="rounded-2xl bg-slate-50 dark:bg-slate-800/60 p-4">
+                  <div class="text-sm font-semibold">Gentle Care</div>
+                  <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Compassionate approach to every patient.</p>
+                </div>
+                <div class="rounded-2xl bg-slate-50 dark:bg-slate-800/60 p-4">
+                  <div class="text-sm font-semibold">Flexible Hours</div>
+                  <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Evening and weekend appointments.</p>
+                </div>
+              </div>
+              <a id="book" href="#booking-form" class="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-brand px-5 py-3 font-semibold text-white hover:opacity-90 transition">
+                Book Your Appointment Now
+              </a>
+              <p class="mt-3 text-center text-xs text-slate-500 dark:text-slate-400">
+                Scroll down to complete your booking request.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- SERVICES SECTION: Showcase dental services with descriptions                -->
+    <!-- Features: Grid layout, service icons, benefit descriptions                 -->
+    <!-- Mobile Padding: Proper spacing on small screens (px-4, py-6)               -->
+    <!-- ============================================================================ -->
+    <section id="services" class="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20" data-section="services">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold">Our Services</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-300">Comprehensive dental care for the whole family.</p>
+      </div>
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- ===== GENERAL DENTISTRY SERVICE CARD ===== -->
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white dark:bg-slate-900 hover:shadow-soft transition">
+          <div class="h-12 w-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-2xl">
+            🦷
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">General Dentistry</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Routine cleanings, exams, and preventive care to maintain your oral health.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li>✓ Professional cleanings</li>
+            <li>✓ Cavity detection</li>
+            <li>✓ Gum health checks</li>
+          </ul>
+        </div>
+
+        <!-- ===== COSMETIC DENTISTRY SERVICE CARD ===== -->
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white dark:bg-slate-900 hover:shadow-soft transition">
+          <div class="h-12 w-12 rounded-xl bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center text-2xl">
+            ✨
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Cosmetic Dentistry</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Enhance your smile with teeth whitening, veneers, and bonding treatments.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li>✓ Teeth whitening</li>
+            <li>✓ Porcelain veneers</li>
+            <li>✓ Smile design</li>
+          </ul>
+        </div>
+
+        <!-- ===== RESTORATIVE DENTISTRY SERVICE CARD ===== -->
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white dark:bg-slate-900 hover:shadow-soft transition">
+          <div class="h-12 w-12 rounded-xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-2xl">
+            🔧
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Restorative Care</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Repair damaged teeth with fillings, crowns, bridges, and implants.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li>✓ Dental implants</li>
+            <li>✓ Crowns & bridges</li>
+            <li>✓ Root canals</li>
+          </ul>
+        </div>
+
+        <!-- ===== ORTHODONTICS SERVICE CARD ===== -->
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white dark:bg-slate-900 hover:shadow-soft transition">
+          <div class="h-12 w-12 rounded-xl bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-2xl">
+            📐
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Orthodontics</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Straighten your teeth with traditional braces or clear aligners.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li>✓ Metal braces</li>
+            <li>✓ Clear aligners</li>
+            <li>✓ Bite correction</li>
+          </ul>
+        </div>
+
+        <!-- ===== PEDIATRIC DENTISTRY SERVICE CARD ===== -->
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white dark:bg-slate-900 hover:shadow-soft transition">
+          <div class="h-12 w-12 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-2xl">
+            👶
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Pediatric Dentistry</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Friendly, gentle dental care designed for children and teens.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li>✓ Kids' cleanings</li>
+            <li>✓ Fluoride treatments</li>
+            <li>✓ Fun environment</li>
+          </ul>
+        </div>
+
+        <!-- ===== EMERGENCY DENTISTRY SERVICE CARD ===== -->
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white dark:bg-slate-900 hover:shadow-soft transition">
+          <div class="h-12 w-12 rounded-xl bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-2xl">
+            🚨
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Emergency Dentistry</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Fast relief for dental emergencies and urgent pain management.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li>✓ Same-day relief</li>
+            <li>✓ 24/7 hotline</li>
+            <li>✓ Emergency extractions</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- WHY CHOOSE US SECTION: Highlights key differentiators                       -->
+    <!-- Features: Feature list, testimonial quote, CTA button                       -->
+    <!-- Mobile Padding: Maintains safe spacing on all screen sizes                  -->
+    <!-- ============================================================================ -->
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 pb-16" data-section="why-us">
+      <div class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 sm:p-12 shadow-soft">
+        <div class="grid lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold">Why Choose SmileCare?</h2>
+            <p class="mt-4 text-slate-600 dark:text-slate-300">We combine cutting-edge technology with a patient-first approach.</p>
+            <ul class="mt-6 space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="text-brand font-bold mt-1">✓</span>
+                <span class="text-slate-700 dark:text-slate-200">Board-certified dentists with specialized training</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-brand font-bold mt-1">✓</span>
+                <span class="text-slate-700 dark:text-slate-200">State-of-the-art digital imaging and laser technology</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-brand font-bold mt-1">✓</span>
+                <span class="text-slate-700 dark:text-slate-200">Comfortable, welcoming environment for all ages</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-brand font-bold mt-1">✓</span>
+                <span class="text-slate-700 dark:text-slate-200">Flexible scheduling with same-day appointments</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-brand font-bold mt-1">✓</span>
+                <span class="text-slate-700 dark:text-slate-200">Transparent pricing and insurance assistance</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <blockquote class="text-xl leading-relaxed text-slate-700 dark:text-slate-200 italic">
+              "Dr. Chen and her team made me feel completely comfortable. The whole experience was professional yet friendly. I've never had better dental care!"
+            </blockquote>
+            <div class="mt-6">
+              <p class="font-semibold text-slate-800 dark:text-slate-100">Sarah Martinez</p>
+              <p class="text-sm text-slate-500 dark:text-slate-400">Patient since 2022</p>
+            </div>
+            <div class="mt-6 flex gap-1">
+              <span class="text-amber-400">★★★★★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- BOOKING FORM SECTION: Contact form for appointment requests                 -->
+    <!-- Features: Multi-field form, validation, clear labels                        -->
+    <!-- Mobile Padding: Form fields properly spaced on mobile (p-4)                 -->
+    <!-- ============================================================================ -->
+    <section id="booking-form" class="mx-auto max-w-2xl px-4 sm:px-6 py-16 sm:py-20" data-section="booking">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl sm:text-4xl font-bold">Schedule Your Appointment</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-300">Fill out the form below and we'll contact you to confirm.</p>
+      </div>
+      <form id="appointmentForm" class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 sm:p-10 shadow-soft">
+        <div class="grid sm:grid-cols-2 gap-6">
+          <!-- ===== FULL NAME FIELD ===== -->
+          <div class="sm:col-span-2">
+            <label for="full_name" class="block text-sm font-semibold mb-2">Full Name</label>
+            <input 
+              type="text" 
+              id="full_name" 
+              name="full_name" 
+              required 
+              class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 text-slate-800 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand" 
+              placeholder="John Doe"
+            />
+          </div>
+
+          <!-- ===== EMAIL FIELD ===== -->
+          <div>
+            <label for="email" class="block text-sm font-semibold mb-2">Email Address</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required 
+              class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 text-slate-800 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand" 
+              placeholder="john@example.com"
+            />
+          </div>
+
+          <!-- ===== PHONE FIELD ===== -->
+          <div>
+            <label for="phone" class="block text-sm font-semibold mb-2">Phone Number</label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              required 
+              class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 text-slate-800 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand" 
+              placeholder="(555) 123-4567"
+            />
+          </div>
+
+          <!-- ===== SERVICE TYPE FIELD ===== -->
+          <div class="sm:col-span-2">
+            <label for="service_type" class="block text-sm font-semibold mb-2">Service Needed</label>
+            <select 
+              id="service_type" 
+              name="service_type" 
+              required 
+              class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-brand"
+            >
+              <option value="">Select a service</option>
+              <option value="general">General Dentistry</option>
+              <option value="cosmetic">Cosmetic Dentistry</option>
+              <option value="restorative">Restorative Care</option>
+              <option value="orthodontics">Orthodontics</option>
+              <option value="pediatric">Pediatric Dentistry</option>
+              <option value="emergency">Emergency Dentistry</option>
+              <option value="cleaning">Routine Cleaning</option>
+            </select>
+          </div>
+
+          <!-- ===== PREFERRED DATE FIELD ===== -->
+          <div class="sm:col-span-2">
+            <label for="preferred_date" class="block text-sm font-semibold mb-2">Preferred Appointment Date</label>
+            <input 
+              type="date" 
+              id="preferred_date" 
+              name="preferred_date" 
+              required 
+              class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-brand"
+            />
+          </div>
+
+          <!-- ===== MESSAGE FIELD ===== -->
+          <div class="sm:col-span-2">
+            <label for="message" class="block text-sm font-semibold mb-2">Additional Notes (Optional)</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="4" 
+              class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 text-slate-800 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand" 
+              placeholder="Tell us about any dental concerns or special needs..."
+            ></textarea>
+          </div>
+
+          <!-- ===== SUBMIT BUTTON ===== -->
+          <div class="sm:col-span-2">
+            <button 
+              type="submit" 
+              class="w-full rounded-xl bg-brand px-6 py-3 font-semibold text-white shadow-soft hover:opacity-90 transition"
+            >
+              Request Appointment
+            </button>
+            <p class="mt-3 text-center text-xs text-slate-500 dark:text-slate-400">
+              We'll contact you within 24 hours to confirm your appointment.
+            </p>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- TESTIMONIALS SECTION: Patient reviews and success stories                   -->
+    <!-- Features: Multiple testimonial cards, ratings, patient info                 -->
+    <!-- Mobile Padding: Cards properly spaced on all screen sizes                   -->
+    <!-- ============================================================================ -->
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20" data-section="testimonials">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold">What Our Patients Say</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-300">Trusted by hundreds of happy patients in our community.</p>
+      </div>
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- ===== TESTIMONIAL CARD 1 ===== -->
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white dark:bg-slate-900">
+          <div class="flex gap-1 mb-3">
+            <span class="text-amber-400">★★★★★</span>
+          </div>
+          <p class="text-slate-700 dark:text-slate-200">"Dr. Chen's team is amazing. My root canal was painless and the follow-up care was excellent. Highly recommend!"</p>
+          <div class="mt-4">
+            <p class="font-semibold text-slate-800 dark:text-slate-100">Michael Thompson</p>
+            <p class="text-sm text-slate-500 dark:text-slate-400">Restorative Care Patient</p>
+          </div>
+        </div>
+
+        <!-- ===== TESTIMONIAL CARD 2 ===== -->
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white dark:bg-slate-900">
+          <div class="flex gap-1 mb-3">
+            <span class="text-amber-400">★★★★★</span>
+          </div>
+          <p class="text-slate-700 dark:text-slate-200">"My teeth have never looked better! The whitening treatment transformed my smile. I feel so confident now."</p>
+          <div class="mt-4">
+            <p class="font-semibold text-slate-800 dark:text-slate-100">Jessica Lee</p>
+            <p class="text-sm text-slate-500 dark:text-slate-400">Cosmetic Dentistry Patient</p>
+          </div>
+        </div>
+
+        <!-- ===== TESTIMONIAL CARD 3 ===== -->
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 bg-white dark:bg-slate-900">
+          <div class="flex gap-1 mb-3">
+            <span class="text-amber-400">★★★★★</span>
+          </div>
+          <p class="text-slate-700 dark:text-slate-200">"My son actually looks forward to his dental visits now! The staff is so patient and caring with kids."</p>
+          <div class="mt-4">
+            <p class="font-semibold text-slate-800 dark:text-slate-100">Amanda Rodriguez</p>
+            <p class="text-sm text-slate-500 dark:text-slate-400">Pediatric Dentistry Patient</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- CTA SECTION: Final call-to-action before footer                            -->
+    <!-- Features: Prominent messaging, booking button, contact info                 -->
+    <!-- Mobile Padding: Safe spacing on small screens (p-4)                         -->
+    <!-- ============================================================================ -->
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 pb-16" data-section="final-cta">
+      <div class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-gradient-to-br from-brand/10 to-brand/5 dark:from-brand/20 dark:to-brand/10 p-8 sm:p-12 shadow-soft">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-2xl sm:text-3xl font-bold">Ready for Your Best Smile?</h2>
+          <p class="mt-4 text-slate-600 dark:text-slate-300">Schedule your appointment today and experience SmileCare's commitment to excellence.</p>
+          <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="#booking-form" class="inline-flex items-center justify-center rounded-xl bg-brand px-6 py-3 font-semibold text-white hover:opacity-90 transition">
+              Book Now
+            </a>
+            <a href="tel:+15551234567" class="inline-flex items-center justify-center rounded-xl border border-slate-200 dark:border-slate-800 px-6 py-3 font-semibold hover:bg-slate-50 dark:hover:bg-slate-900 transition">
+              Call (555) 123-4567
+            </a>
+          </div>
+          <p class="mt-6 text-sm text-slate-500 dark:text-slate-400">
+            📍 123 Smile Street, Dental City, ST 12345<br/>
+            🕐 Mon-Fri: 8am-6pm | Sat: 9am-2pm | Sun: Closed
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- FOOTER: Copyright, links, and theme toggle                                 -->
+    <!-- Features: Sticky to bottom, responsive layout, navigation links             -->
+    <!-- Mobile Padding: Proper spacing on all viewport sizes                        -->
+    <!-- ============================================================================ -->
+    <footer class="mt-auto border-t border-slate-200 dark:border-slate-800">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-slate-500 dark:text-slate-400">© <span id="year"></span> SmileCare Dental. All rights reserved.</p>
+        <nav class="flex items-center gap-4 text-sm">
+          <a class="hover:underline text-slate-600 dark:text-slate-300" href="#services">Services</a>
+          <a class="hover:underline text-slate-600 dark:text-slate-300" href="#why-us">Why Us</a>
+          <a class="hover:underline text-slate-600 dark:text-slate-300" href="#">Privacy</a>
+          <a class="hover:underline text-slate-600 dark:text-slate-300" href="#">Terms</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ============================================================================ -->
+  <!-- JAVASCRIPT: Theme toggle, year update, and form handling                   -->
+  <!-- Functions: toggleTheme(), setCurrentYear(), handleFormSubmit()              -->
+  <!-- ============================================================================ -->
+  
+  <script src="script.js"></script>
+</body>
+</html>
